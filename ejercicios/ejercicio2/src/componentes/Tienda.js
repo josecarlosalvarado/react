@@ -21,8 +21,9 @@ export default function Tienda() {
     return (
         <div>
             <Lista category="electronica" products={tienda.electronica}/>
-            <Lista />
-            <Lista />
+            <Lista category="alimentacion" products={tienda.alimentacion}/>
+            <Lista category="mascotas" products={tienda.mascotas}/>
         </div>
     )
 }
+

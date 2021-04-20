@@ -1,7 +1,19 @@
+import Tienda from "./Tienda";
 export default function Lista() {
-    return (
+    return(
         <div>
-            <h1>soy una lista</h1>
+            <ol>
+                {
+                    Tienda.producto.map (producto => {
+                        <h1>{producto.category}</h1>;
+                        <li>{producto.products}</li>
+                    })
+                }
+            </ol>
         </div>
     )
+      
 }
+
+
+
