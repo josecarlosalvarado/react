@@ -1,8 +1,12 @@
 
+export default function Agenda({ contacto, eliminar }) {
 
-
-
-export default function Agenda({ contacto }) {
+    const removeContact = PhoneNumber => {
+        
+        return e => {
+            eliminar(contacto.filter(item => item.telefono !== PhoneNumber))
+        }
+    }
 
 
     return (
@@ -15,7 +19,9 @@ export default function Agenda({ contacto }) {
                             <li className="list-group-item">{contacto.apellidos}</li>
                             <li className="list-group-item">{contacto.telefono}</li>
                             <li className="list-group-item">{contacto.direccion}, {contacto.codigoPostal}, {contacto.ciudad}</li>
-                            <li className="list-group-item"><button className=" btn btn-warning">Eliminar</button></li>
+                            <li className="list-group-item">
+                                <button className=" btn btn-warning" onClick={removeContact(contacto.telefono)}>Eliminar</button>
+                            </li>
                         </ul>
                 )
             })}

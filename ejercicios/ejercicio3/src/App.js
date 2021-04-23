@@ -17,7 +17,8 @@ const [contactos, setContactos] = useState(initialContactState)
   return (
     <div className="container">
       <h2 className="my-4">Agenda</h2>
-        <Agenda contacto={contactos} />
+        <Agenda contacto={contactos} eliminar={setContactos}/>
+
         <h2 className="my-4">Formulario</h2>
         <Formulario setContactos={setContactos} />
     </div>

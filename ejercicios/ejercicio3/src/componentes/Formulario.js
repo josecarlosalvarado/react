@@ -55,24 +55,17 @@ export default function Formulario({ setContactos }) {
 
 
     function submit(e) {
-        // e.preventDefault();
+        e.preventDefault();
 
         // const nuevoContacto = { nombre, apellidos, direccion, codigoPostal, ciudad, telefono };
 
 
-        // //el currentcontact  recibe la array anterior y la modifica con los nuevos valores
-        // setContactos(currentContact => [...currentContact, nuevoContacto]);
+        //el currentcontact  recibe la array anterior y la modifica con los nuevos valores
+        setContactos(currentContact => [...currentContact, form]);
 
-        // e.target.reset();
+        e.target.reset();
 
-        // const nuevoContacto = {
-        //     nombre: nombre,
-        //     apellidos: apellidos,
-        //     direccion: direccion,
-        //     codigoPostal: codigoPostal,
-        //     ciudad: ciudad,
-        //     telefono: telefono,
-        // };
+        
     }
 
     return (
@@ -85,7 +78,7 @@ export default function Formulario({ setContactos }) {
 
             <input className="form-control mb-3" type="text"  value={form.direccion} id="direccion" onChange={handleInput} placeholder="introduce la direccion" />
 
-            <input className="form-control mb-3" type="text"  value={form.codigoPostal} id="codigpPostal" onChange={handleInput} placeholder="introduce el codigo postal" />
+            <input className="form-control mb-3" type="text"  value={form.codigoPostal} id="codigoPostal" onChange={handleInput} placeholder="introduce el codigo postal" />
 
             <input className="form-control mb-3" type="text"  value={form.ciudad} id="ciudad" onChange={handleInput} placeholder="introduce la ciudad" />
 
