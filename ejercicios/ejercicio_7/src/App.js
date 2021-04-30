@@ -22,6 +22,7 @@ fetch(URL_UPCOMING)
 
   return (
     <div className="App">
+      <h2 className="display-3" >Peliculas De Estreno</h2>
       <Lista Movies={Movies}/>
     </div>
   );
